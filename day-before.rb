@@ -6,10 +6,10 @@ if ARGV.empty?
   print "Usage: ", $0, " YYYY-MM-DD\n"
   exit 1
 end
-inarray = ARGV[0].split('-')
 
-# convert to seconds since epoch, subtract one day (86400 seconds)
+# convert input string to date, subtract one day (86400 seconds)
 #
+inarray = ARGV[0].split('-')
 log_day = Time.gm(inarray[0], inarray[1], inarray[2])
 merge_day = log_day - 86400
 
